@@ -12,3 +12,6 @@ ol {
 .login_bg {
   background: #222D32;
 }
+.login_bg .login-title {
+  margin-top: 150px;
+}
