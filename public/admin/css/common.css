@@ -15,3 +15,11 @@ ol {
 .login_bg .login-title {
   margin-top: 150px;
 }
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 180px;
+  background: #222D32;
+}
