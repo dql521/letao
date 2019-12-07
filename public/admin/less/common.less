@@ -25,6 +25,11 @@ ul,ol{
   height: 100%;
   width: 180px;
   background: #222D32;
+  z-index: 999;
+  transition: .5s all;
+  &.change{
+    left: -180px;
+  }
   .title{
     display: block;
     color: #fff;
@@ -69,5 +74,40 @@ ul,ol{
   .nav a.active{
     background: #242424;
     border-left: 3px solid royalblue;
+  }
+}
+
+.content-kind{
+  margin-left: 180px;
+  transition: .5s all;
+  &.change{
+    margin-left: 0;
+  }
+  .topBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding-left: 180px;
+    background: #3C8DBC;
+    z-index: 900;
+    transition: .5s all;
+    &.change{
+      padding: 0;
+    }
+    a{
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      color: #fff;
+      span{
+        font-size: 18px;
+      }
+    }
+  }
+  .breadCrumb{
+    margin: 70px 20px 0;
   }
 }
