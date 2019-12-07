@@ -107,3 +107,6 @@ ol {
 .content-kind .breadCrumb {
   margin: 70px 20px 0;
 }
+.content-kind #page li {
+  cursor: pointer;
+}
