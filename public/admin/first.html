@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,74 +8,139 @@
   <title>乐淘商城</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="css/common.css">
-    <!-- 左侧导航区 -->
-    <div class="aside">
-        <a href="index.html" class="title">乐淘管理</a>
-        <div class="info">
-          <img src="images/default.png" alt="">
-          <p>超级管理员</p>
-        </div>
-        <div class="nav">
-            <ul>
-              <li><a href="user.html">
-                <span class="glyphicon glyphicon-user"></span>
-                <span>用户管理</span>
-              </a></li>
-              <li><a href="javascript:;" class="clasify">
-                <span class="glyphicon glyphicon-list"></span>
-                <span>分类管理</span>
-              </a></li>
-              <div class="second" style="display: block;">
-                <a href="first.html" class="active">一级分类</a>
-                <a href="second.html">二级分类</a>
-              </div>
-              <li>
-                  <a href="product.html">
-                    <span class="glyphicon glyphicon-tags"></span>
-                    <span>商品管理</span>
-                  </a>
-                </li>
-            </ul>
-        </div>
-      </div>
-      <!-- 右侧内容区 -->
-      <div class="content content-kind">
-        <div class="topBar">
-          <a href="javascript:;" class="pull-left icon_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
-          <a href="javascript:;" class="pull-right icon_logout"><span class="glyphicon glyphicon-log-out"></span></a>
-        </div>
-        <div class="breadCrumb">
-            <ol class="breadcrumb">
-                <li><a href="index.html">管理系统</a></li>
-                <li>首页</li>
-              </ol>
-        </div>
-      </div>
-    
-      <div class="modal fade logoutModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">温馨提示</h4>
-              </div>
-              <div class="modal-body">
-                <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>你确定要退出本系统吗?</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary btn-sure">确定</button>
-              </div>
-            </div>
-          </div>
-        </div>
 </head>
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/nprogress/nprogress.js"></script>
-<script src="js/common.js"></script>
+
 <body>
-  
+  <!-- 左侧导航区 -->
+  <div class="aside">
+    <a href="index.html" class="title">乐淘管理</a>
+    <div class="info">
+      <img src="images/default.png" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="user.html">
+            <span class="glyphicon glyphicon-user"></span>
+            <span>用户管理</span>
+          </a></li>
+        <li><a href="javascript:;" class="clasify">
+            <span class="glyphicon glyphicon-list"></span>
+            <span>分类管理</span>
+          </a></li>
+        <div class="second" style="display: block;">
+          <a href="first.html" class="active">一级分类</a>
+          <a href="second.html">二级分类</a>
+        </div>
+        <li>
+          <a href="product.html">
+            <span class="glyphicon glyphicon-tags"></span>
+            <span>商品管理</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 右侧内容区 -->
+  <div class="content content-kind">
+    <div class="topBar">
+      <a href="javascript:;" class="pull-left icon_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+      <a href="javascript:;" class="pull-right icon_logout"><span class="glyphicon glyphicon-log-out"></span></a>
+    </div>
+    <div class="breadCrumb">
+      <ol class="breadcrumb">
+        <li><a href="index.html">管理系统</a></li>
+        <li>分类管理</li>
+        <li>一级分类</li>
+      </ol>
+    </div>
+
+    <!-- 添加按钮 -->
+    <div class="lt_content" style="margin-left: 20px;">
+      <button class="btn btn-default mb_20 addBtn">添加分类</button>
+    </div>
+
+    <!-- 表格内容 -->
+    <table class="table table-bordered table-striped text-center">
+      <thead>
+        <tr>
+          <th width="20%">序号</th>
+          <th>一级分类</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 模板引擎 -->
+      </tbody>
+    </table>
+
+    <!-- 分页器 -->
+    <div class="text-center">
+      <ul id="page"></ul>
+  </div>
+  </div>
+
+  <!-- 退出模态框 -->
+  <div class="modal fade logoutModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>你确定要退出本系统吗?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary btn-sure">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 添加模态框 -->
+  <div class="modal fade addModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">添加分类</h4>
+        </div>
+        <form>
+          <div class="modal-body">
+              <div class="form-group">
+                <input type="text" class="form-control" name="categoryName" placeholder="请输入一级分类名称">
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary">确定</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/nprogress/nprogress.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+  <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/first.js"></script>
+  <script type="text/html" id="tpl">
+    {{each rows v i}}
+  <tr>
+    <td>{{(page-1)*size+i+1}}</td>
+    <td>{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+  </script>
+
 </body>
+
 </html>

@@ -33,13 +33,13 @@ $(function () {
   render()
 
   // 启用/禁用用户功能
-  var id,isDelete
+  var id, isDelete
   $('tbody').on('click', '.btn', function () {
     $('.upUserModal').modal('show')
     id = $(this).data('id')
     isDelete = $(this).hasClass('btn-success') ? 1 : 0
   })
-  $('.upUserBtn').on('click',function () {
+  $('.upUserBtn').on('click', function () {
     $.ajax({
       type: 'post',
       url: '/user/updateUser',
@@ -48,11 +48,8 @@ $(function () {
         isDelete: isDelete
       },
       success: function (info) {
-        console.log(info)
         if (info.success) {
-          // 隐藏模态框
           $('.upUserModal').modal('hide')
-          // 重新渲染
           render()
         }
       }
