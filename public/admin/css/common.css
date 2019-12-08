@@ -110,3 +110,6 @@ ol {
 .content-kind #page li {
   cursor: pointer;
 }
+.table th {
+  text-align: center;
+}
