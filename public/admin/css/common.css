@@ -113,3 +113,7 @@ ol {
 .table th {
   text-align: center;
 }
+.table {
+  width: 96%;
+  margin: auto;
+}
