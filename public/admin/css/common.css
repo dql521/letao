@@ -117,3 +117,6 @@ ol {
   width: 96%;
   margin: auto;
 }
+.table tr td {
+  vertical-align: auto;
+}

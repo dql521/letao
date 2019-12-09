@@ -11,7 +11,6 @@ $(function () {
                 pageSize:pageSize
             },
             success: function (info) {
-              console.log(info);
               
                 $('tbody').html(template('tpl',info))
                 $('#page').bootstrapPaginator({
@@ -56,27 +55,4 @@ $(function () {
         }
     })
 
-    // 上架/下架用户功能
-  var id, isDelete
-  $('tbody').on('click', '.btn', function () {
-    $('.chageModal').modal('show')
-    id = $(this).data('id')
-    isDelete = $(this).hasClass('btn-success') ? 2 : 1
-  })
-  $('.chageBtn').on('click', function () {
-    $.ajax({
-      type: 'post',
-      url: '/user/updateUser',
-      data: {
-        id: id,
-        isDelete: isDelete
-      },
-      success: function (info) {
-        if (info.success) {
-          $('.chageModal').modal('hide')
-          render()
-        }
-      }
-    })
-  })
 })
