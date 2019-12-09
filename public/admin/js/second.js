@@ -45,13 +45,11 @@ $(function () {
         pageSize: 100
       },
       success: function (info) {
-
-        console.log(info);
-
         $('.dropdown-menu').html(template('tpl2', info))
       }
     })
   })
+
   // 下拉框选择
   $('.dropdown-menu').on('click', 'a', function () {
     var txt = $(this).text()
@@ -63,9 +61,7 @@ $(function () {
   // 上传Logo
   $('#fileupload').fileupload({
     dataType: 'json',
-    //上传完成回调函数。还有其他的回调函数，见文档
     done: function (e, data) {
-      console.log(data);
       var picAddr = data.result.picAddr
       $('.imgBox img').attr('src', picAddr)
       $('[name="brandLogo"]').val(picAddr)
