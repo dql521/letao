@@ -11,6 +11,8 @@ $(function () {
                 pageSize:pageSize
             },
             success: function (info) {
+              console.log(info);
+              
                 $('tbody').html(template('tpl',info))
                 $('#page').bootstrapPaginator({
                     bootstrapMajorVersion: 3,
