@@ -1,24 +1,28 @@
-*{
+* {
   padding: 0;
   margin: 00;
 }
-a:hover{
+
+a:hover {
   text-decoration: none;
 }
-ul,ol{
+
+ul,
+ol {
   list-style-type: none;
 }
 
 // login样式
-.login_bg{
+.login_bg {
   background: #222D32;
-  .login-title{
+
+  .login-title {
     margin-top: 150px;
   }
 }
 
 // 首页样式
-.aside{
+.aside {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,10 +31,12 @@ ul,ol{
   background: #222D32;
   z-index: 999;
   transition: .5s all;
-  &.change{
+
+  &.change {
     left: -180px;
   }
-  .title{
+
+  .title {
     display: block;
     color: #fff;
     font-size: 24px;
@@ -40,18 +46,21 @@ ul,ol{
     text-align: center;
     background: #367FA9;
   }
-  .info{
+
+  .info {
     height: 180px;
     width: 100%;
     padding-top: 30px;
-    img{
+
+    img {
       display: block;
       width: 80px;
       height: 80px;
       border-radius: 50%;
       margin: auto;
     }
-    p{
+
+    p {
       color: #fff;
       font-size: 18px;
       height: 40px;
@@ -60,7 +69,8 @@ ul,ol{
       margin-bottom: 10px;
     }
   }
-  .nav a{
+
+  .nav a {
     display: block;
     height: 40px;
     line-height: 40px;
@@ -68,22 +78,26 @@ ul,ol{
     color: #fff;
     border-left: 3px solid transparent;
   }
-  .nav .second{
+
+  .nav .second {
     padding-left: 15px;
   }
-  .nav a.active{
+
+  .nav a.active {
     background: #242424;
     border-left: 3px solid royalblue;
   }
 }
 
-.content-kind{
+.content-kind {
   margin-left: 180px;
   transition: .5s all;
-  &.change{
+
+  &.change {
     margin-left: 0;
   }
-  .topBar{
+
+  .topBar {
     position: fixed;
     top: 0;
     left: 0;
@@ -93,38 +107,46 @@ ul,ol{
     background: #3C8DBC;
     z-index: 900;
     transition: .5s all;
-    &.change{
+
+    &.change {
       padding: 0;
     }
-    a{
+
+    a {
       display: block;
       height: 50px;
       line-height: 50px;
       padding: 0 20px;
       color: #fff;
-      span{
+
+      span {
         font-size: 18px;
       }
     }
   }
-  .breadCrumb{
+
+  .breadCrumb {
     margin: 70px 20px 0;
   }
-  #page{
-    li{
+
+  #page {
+    li {
       cursor: pointer;
     }
   }
 }
-.table{
-  th{
+
+.table {
+  th {
     text-align: center;
   }
 }
-.table{
-width: 96%;
-margin: auto;
-tr td{
-  vertical-align: auto;
-}
+
+.table {
+  width: 96%;
+  margin: auto;
+
+  tr td {
+    vertical-align: auto;
+  }
 }
