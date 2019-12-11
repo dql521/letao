@@ -1,0 +1,52 @@
+// 内容区域，滚动
+.lt_content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+  }
+
+// 导航
+.nav{
+    padding: 10px;
+    overflow: hidden;
+  li{
+      width: 33.3333%;
+      float: left;
+    a{
+        display: block;
+    }
+  }
+}
+// 产品区
+.lt_product{
+    padding: 10px;
+    overflow: hidden;
+    .product{
+       display: block;
+       width: 48%;
+       text-align: center;
+       border: 1px solid #ccc;
+       float: left;
+       margin-bottom: 15px;
+       &:nth-child(2n+1){
+           margin-right: 15px;
+       }
+       p{
+           text-align: left;
+           padding: 10px;
+       }
+      .price{
+          span:first-child{
+              color: red;
+          }
+          span:last-child{
+              color: #666;
+              text-decoration: line-through;
+          }
+      }
+      button{
+          margin-bottom: 5px;
+      }
+    }
+}

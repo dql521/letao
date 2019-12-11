@@ -1,0 +1,79 @@
+/* 公共初始化 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+     /* 头部样式 */
+  .lt_header{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #006699;
+    z-index: 999;
+    .icon_left,.icon_right{
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        i{
+            font-size: 18px;
+            color: #fff;
+            line-height: 45px;
+
+        }
+    }
+    h4{
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        font-weight: 400;
+        line-height: 45px;
+        margin: 0;
+    }
+  }
+
+//   底部样式
+.lt_footer{
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #006699;
+    padding-top: 8px;
+    z-index: 999;
+    a{
+        flex: 1;
+        height: 45px;
+        text-align: center;
+        color: #fff;
+        p{
+          font-size: 14px;
+          color: #fff;
+        }
+        &.active{
+            color: orange;
+            p{
+                color: orange;
+            }
+        }
+    }
+}
+ 
